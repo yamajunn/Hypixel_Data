@@ -1,0 +1,1 @@
+WinOrLoss, Color, PlayerNum, Star, Win, Loss, FK, FD, Kill, Death, BB, BL, WLR, FKDR, KDR, BBLR, McID
