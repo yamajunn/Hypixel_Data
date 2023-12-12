@@ -1,0 +1,21 @@
+Winner,PlayerNum1,Star1,Win1,Loss1,FK1,FD1,Kill1,Death1,BB1,BL1,PlayerNum2,Star2,Win2,Loss2,FK2,FD2,Kill2,Death2,BB2,BL2,PlayerNum3,Star3,Win3,Loss3,FK3,FD3,Kill3,Death3,BB3,BL3,PlayerNum4,Star4,Win4,Loss4,FK4,FD4,Kill4,Death4,BB4,BL4
+
+4s BedWars ゲーム戦績の教師あり学習
+
+目的変数: Winner, 各チームの(FK数, Kill数, BB数), Killランキングチーム(上位3位)
+
+説明変数(データ加工前):
+    Winner, 0-3 (integer)
+    各チームの(FK数, Kill数, BB数), [n0, n1, n2] (integer)
+    Killランキングチーム(上位3位), [0-3, 0-3, 0-3] (integer)
+    各チームの人数, 0-4 (integer)
+    各プレイヤーのこれまでの戦績(
+        Star, n (integer)
+        Win, Loss, Kill, Death, FK, FD, BB, BL, WLR, KDR, FKDR, BBLR, [各要素] (integer)
+        Iron, Gold, Diamond, Emerald, [各要素] (integer)
+    ),
+説明変数(データ加工):
+    Winner, 0-3 (integer)
+    各チームの(FK数, Kill数, BB数), [n0, n1, n2] (integer)
+    各チームの人数, 0-4 (integer)
+    Star合計,
