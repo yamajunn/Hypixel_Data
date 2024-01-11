@@ -1,8 +1,16 @@
 import requests
 from pprint import pprint
 def bedwars_status(name):
-    API_KEY = "253c7c06-d1fb-49b5-99e4-3c74cbb874f5"
+    API_KEY = "9fb2d581-f949-4ea2-800e-db7e0ed69c44"
+    def getuuid(call):
+        r = requests.get(call,timeout=10)
+        return r.json()
+
+    def getinfo(call):
+        r = requests.get(call,timeout=10)
+        return r.json()
     try:
+<<<<<<< HEAD
         def getuuid(call):
             r = requests.get(call,timeout=100)
             return r.json()
@@ -11,11 +19,16 @@ def bedwars_status(name):
             r = requests.get(call,timeout=100)
             return r.json()
 
+=======
+        print(name)
+>>>>>>> aa3e6598b0af35d80aa25927bbedde336d62a59c
         name_link = f"https://api.mojang.com/users/profiles/minecraft/{name}"
         uuid = getuuid(name_link)["id"]
+        print(uuid)
         uuid_link = f"https://api.hypixel.net/player?key={API_KEY}&uuid={uuid}"
 
         data_dic = getinfo(uuid_link)
+        print(data_dic["success"])
         data_list = []
         if data_dic["success"] == True:
             if data_dic["player"] != None:
@@ -38,7 +51,11 @@ def bedwars_status(name):
                 data_list.append(data_dic["player"]['achievements']['bedwars_level'])
                 for item in dic_list:
                     data_list.append(data_dic["player"]["stats"]["Bedwars"][item])
+<<<<<<< HEAD
                 if data_dic["player"]["stats"]["Bedwars"].get('winstreak') != None:
+=======
+                if 'winstreak' in data_dic["player"]["stats"]["Bedwars"]:
+>>>>>>> aa3e6598b0af35d80aa25927bbedde336d62a59c
                     data_list.append(data_dic["player"]["stats"]["Bedwars"]['winstreak'])
                 else:
                     data_list.append(0)
@@ -48,9 +65,14 @@ def bedwars_status(name):
                 data_list.append(round(data_list[9]/data_list[10], 2))
                 return data_list
             else:
-                return [True, name]
+                return [True, name, "NotPlayerData"]
         else:
-            return [True, name]
+            return [True, name, "NotSuccess"]
     except KeyError:
+<<<<<<< HEAD
         return [True, name]
 # bedwars_status("yan_narakuaikouk")
+=======
+        return [True, name, "KeyError"]
+# bedwars_status("Gokiton")
+>>>>>>> aa3e6598b0af35d80aa25927bbedde336d62a59c
