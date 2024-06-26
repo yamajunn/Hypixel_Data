@@ -21,7 +21,7 @@ def bedwars_status(name):
 
 =======
         print(name)
->>>>>>> aa3e6598b0af35d80aa25927bbedde336d62a59c
+>>>>>>> 
         name_link = f"https://api.mojang.com/users/profiles/minecraft/{name}"
         uuid = getuuid(name_link)["id"]
         print(uuid)
