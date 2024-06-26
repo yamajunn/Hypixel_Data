@@ -1,7 +1,7 @@
 import requests
 from pprint import pprint
 def bedwars_status(name):
-    API_KEY = "9fb2d581-f949-4ea2-800e-db7e0ed69c44"
+    API_KEY = ""
     def getuuid(call):
         r = requests.get(call,timeout=10)
         return r.json()
