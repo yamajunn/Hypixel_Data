@@ -75,4 +75,4 @@ def bedwars_status(name):
 =======
         return [True, name, "KeyError"]
 # bedwars_status("Gokiton")
->>>>>>> aa3e6598b0af35d80aa25927bbedde336d62a59c
+>>>>>>> 
