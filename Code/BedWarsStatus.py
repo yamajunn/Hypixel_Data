@@ -55,7 +55,7 @@ def bedwars_status(name):
                 if data_dic["player"]["stats"]["Bedwars"].get('winstreak') != None:
 =======
                 if 'winstreak' in data_dic["player"]["stats"]["Bedwars"]:
->>>>>>> aa3e6598b0af35d80aa25927bbedde336d62a59c
+>>>>>>> 
                     data_list.append(data_dic["player"]["stats"]["Bedwars"]['winstreak'])
                 else:
                     data_list.append(0)
