@@ -21,7 +21,6 @@ def who(s):
                     break
     return who_list
 
-path = r"/Users/chinq500/Library/Application Support/minecraft/versions/1.8.9/logs/latest.log"
 # path = r"C:/Users/Owner/AppData/Roaming/.minecraft/logs/blclient/minecraft/latest.log"
 
 f = open(path)
